@@ -1,4 +1,4 @@
-module MotionAwesome
+module Motella
   module_function
 
   class InvalidAwesomeIconError < RuntimeError; end
@@ -20,8 +20,8 @@ module MotionAwesome
     comp
   end
 
-  def font( size )
-    UIFont.fontWithName( 'FontAwesome', size:size )
+  def font(size)
+    UIFont.fontWithName('fontello', size:size)
   end
 
   def parse_options( icon, opts )
@@ -46,8 +46,10 @@ module MotionAwesome
   end
 
   def hex_for_icon( icon )
-    index = plist["fa-#{icon}"]
-    raise InvalidAwesomeIconError, "Unable to find icon representation for `#{icon.inspect}" unless index
+    # p "ICON icon-#{icon}"
+    index = plist["icon-#{icon}"]
+    raise InvalidAwesomeIconError, "Unable to find icon representation for #{icon.inspect}" unless index
+    # p "index #{index}"
     index.hex.chr(Encoding::UTF_8)
   end
 
@@ -58,13 +60,12 @@ module MotionAwesome
   def plist
     @plist ||= begin
       NSMutableDictionary.dictionaryWithContentsOfFile(
-        NSBundle.mainBundle.resourcePath.stringByAppendingPathComponent( "fontawesome.plist" )
+        NSBundle.mainBundle.resourcePath.stringByAppendingPathComponent('motella.plist')
       )
     end
   end
 
   def button_types
-    @button_types ||=
-      MotionMap::Map[custom: UIButtonTypeCustom, rounded: UIButtonTypeRoundedRect]
+    @button_types ||= MotionMap::Map[custom: UIButtonTypeCustom, rounded: UIButtonTypeRoundedRect]
   end
 end

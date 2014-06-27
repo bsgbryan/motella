@@ -1,6 +1,6 @@
 $:.unshift('/Library/RubyMotion/lib')
 require 'motion/project/template/ios'
-require './lib/motion-awesome'
+require './lib/motella'
 require 'sugarcube-gestures'
 
 require 'bundler'
@@ -24,7 +24,7 @@ namespace :gen do
   desc 'Generates plist from css'
   task :plist do
     require File.expand_path('../lib/utils/generator.rb', __FILE__)
-    MotionAwesome::Generator.gen_plist( File.join( File.dirname(__FILE__),
-                                                   %w[css font-awesome.css] ) )
+    # p "CURRENT DIRECTORY #{ENV['fontello']}"
+    Motella::Generator.gen_plist( "#{ENV['home']}/css/fontello-codes.css" )
   end
 end

@@ -2,11 +2,11 @@ require 'css_parser'
 include CssParser
 require 'plist'
 
-module MotionAwesome
+module Motella
   class Generator
     def self.plist
-      File.join( File.dirname( __FILE__),
-                 %w(.. .. resources fontawesome.plist) )
+      # p "WHERE AM I #{File.dirname( __FILE__ )}"
+      './motella.plist'
     end
 
     def self.gen_plist( css )
@@ -14,10 +14,11 @@ module MotionAwesome
       parser.load_file!( css )
       fonts = {}
       parser.each_selector do |selector, declarations, _|
-        next if selector !~ /\A.fa\-/
+        next if selector !~ /\A.icon\-/
         name = selector[/\.(.*)\:before/,1]
+        # p "NAME #{name} = #{declarations[12..-3]}"
         next unless name and name != 'icon-large'
-        fonts[name] = "0x#{declarations[/(f.*)"/, 1]}"
+        fonts[name] = "e#{declarations[12..-3]}"
       end
       write( fonts )
     end

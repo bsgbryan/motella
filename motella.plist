@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>icon-bookmark</key>
+	<string>e807</string>
+	<key>icon-cancel</key>
+	<string>e800</string>
+	<key>icon-completed</key>
+	<string>e808</string>
+	<key>icon-email</key>
+	<string>e819</string>
+	<key>icon-eraser</key>
+	<string>e809</string>
+	<key>icon-evernote</key>
+	<string>e814</string>
+	<key>icon-facebook</key>
+	<string>e813</string>
+	<key>icon-globe</key>
+	<string>e80c</string>
+	<key>icon-instapaper</key>
+	<string>e811</string>
+	<key>icon-mic</key>
+	<string>e817</string>
+	<key>icon-mute</key>
+	<string>e818</string>
+	<key>icon-ok</key>
+	<string>e80b</string>
+	<key>icon-page</key>
+	<string>e80f</string>
+	<key>icon-pause</key>
+	<string>e80e</string>
+	<key>icon-pinterest</key>
+	<string>e816</string>
+	<key>icon-play</key>
+	<string>e80d</string>
+	<key>icon-pocket</key>
+	<string>e812</string>
+	<key>icon-print</key>
+	<string>e810</string>
+	<key>icon-rss</key>
+	<string>e806</string>
+	<key>icon-share</key>
+	<string>e804</string>
+	<key>icon-star</key>
+	<string>e802</string>
+	<key>icon-star-empty</key>
+	<string>e803</string>
+	<key>icon-text</key>
+	<string>e801</string>
+	<key>icon-thumbs-up</key>
+	<string>e80a</string>
+	<key>icon-trash</key>
+	<string>e805</string>
+	<key>icon-twitter</key>
+	<string>e815</string>
+</dict>
+</plist>

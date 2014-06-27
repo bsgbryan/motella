@@ -12,7 +12,7 @@ class UILabel
                             value:font, 
                             range:(2..attr_text.length-1) ) if attr_text.length > 1
     attr_text.addAttribute( NSFontAttributeName, 
-                            value:MotionAwesome.font(font.pointSize), 
+                            value:Motella.font(font.pointSize), 
                             range:(0...1) )
     attr_text.addAttribute( NSForegroundColorAttributeName, 
                             value:awesome_color, 
